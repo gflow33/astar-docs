@@ -5,21 +5,23 @@ sidebar_position: 1
 # Set up your ink! environment
 ## TL;DR
 
-This guide is for those who just getting started with exploring ink! or WASM smart contracts in the Astar ecosystem. Before you can get started you need to make sure your environment supports Rust.
+This guide is for those who are just getting started with exploring ink! or WASM smart contracts in the Astar ecosystem. Before you can get started you need to make sure your environment supports Rust.
 
 ---
 
 ## What is ink!?
 
-Ink! is a Rust eDSL developed by Parity. It targets specifically smart-contract development for Substrate’s `pallet-contracts`. But why ink!? Ink! chooses not to invent a new programming language, but rather adapt a subset of Rust to serve our purpose. If this doesn't already convince you, you find many more good reasons [here](https://use.ink/why-rust-for-smart-contracts). 
+Ink! is a Rust eDSL developed by Parity. It targets specifically smart-contract development for Substrate’s `pallet-contracts`.
 
-Another most asked question when talking about WASM smart contract is: why WASM? Why WebAssembly for smart contracts? You can find all the answers [here](https://use.ink/why-webassembly-for-smart-contracts).
+But why ink!? The main advantage is that ink! chooses not to invent a new programming language, but rather adapt a subset of Rust to serve our purpose. If this doesn't already convince you, you will find many more good reasons [here](https://use.ink/why-rust-for-smart-contracts). 
+
+Another popular question when talking about Wasm smart contracts is: Why WebAssembly (Wasm) for smart contracts? You can find all the answers [here](https://use.ink/why-webassembly-for-smart-contracts).
 
 ## Ink! Environment Setup
 
 ### Rust & Cargo
 
-A pre-requisite for compiling smart contracts is to have Rust and Cargo installed. The easiest way to get Cargo is to install the current stable release of [Rust](https://www.rust-lang.org/) by using [rustup](https://rustup.rs/). Installing Rust using `rustup` will also install `cargo`. On Linux and macOS systems, this is done as follows:
+A pre-requisite for compiling smart contracts is to have Rust and Cargo installed. The easiest way to get Cargo is to install the current stable release of [Rust](https://www.rust-lang.org/) by using [rustup](https://rustup.rs/). Installing Rust using `rustup` will also install `cargo` on Linux and macOS systems, this is done as follows:
 
 ```rust
 curl https://sh.rustup.rs -sSf | sh
@@ -27,7 +29,7 @@ curl https://sh.rustup.rs -sSf | sh
 source ~/.cargo/env
 ```
 
-It will download a script and start the installation. If you are using Windows, go to the [Rust website](https://www.rust-lang.org/tools/install) to understand the steps. Configure to the latest stable and add nightly + WASM target
+It will download a script and start the installation. Go to the [Rust website](https://www.rust-lang.org/tools/install) if you are installing on Windows. Configure to the latest stable and add nightly + Wasm target
 
 ```rust
 rustup default stable
@@ -38,7 +40,7 @@ rustup target add wasm32-unknown-unknown --toolchain nightly
 
 ### ink! CLI[](https://use.ink/getting-started/setup#ink-cli)
 
-The first and most important tool we will be installing is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool for helping set up and manage WebAssembly smart contracts written with ink!. 
+The first and most important tool to install is [cargo-contract](https://github.com/paritytech/cargo-contract), a CLI tool to help set up and manage WebAssembly smart contracts written with ink!.
 
 As a pre-requisite for the tool, you need to install the [binaryen](https://github.com/WebAssembly/binaryen) package, which is used to optimize the WebAssembly bytecode of the contract.
 

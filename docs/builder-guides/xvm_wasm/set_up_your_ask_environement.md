@@ -8,7 +8,7 @@ This guide will suppot you to set up your local environment and deploy a simple 
 
 ## What is Ask!?
 
-Ask! is a framework for AssemblyScript developers to write WASM smart contracts for `pallet-contracts`. Its syntax is similar to TypeScript. [Current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury. Please keep in mind that Ask! is still under development and no release is available at the moment.
+Ask! is a framework for AssemblyScript developers to write Wasm smart contracts for `pallet-contracts`. Its syntax is similar to TypeScript. Please keep in mind that Ask! is still under development and no release is available at the moment.
 
 ## Ask! Environment Setup
 
@@ -86,13 +86,13 @@ We run the command below which build the template contract.
 yarn && yarn build flipper.ts
 ```
 
-The above command will generate WASM code and the metadata file of the contract in `metadata.json` and `flipper.opstimized.wasm` resepectively.
+The above command will generate Wasm code and the metadata file of the contract in `metadata.json` and `flipper.opstimized.wasm` resepectively.
 
 ![08](img/08.png)
 
 Now we will deploy this smart contract on our testnet.
 
-We will access [polkadot.js](https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and pick `metadata.json` for “json for either ABI or .contract bundle” section and pick `flipper.opstimized.wasm` for “compiled contract WASM” section.
+Let's access [polkadot.js](https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and pick `metadata.json` for “json for either ABI or .contract bundle” section and pick `flipper.opstimized.wasm` for “compiled contract WASM” section.
 
 ![09](img/09.png)
 

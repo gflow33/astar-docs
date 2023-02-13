@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Ink! Development
 
-Ink! is a Rust eDSL developed by Parity. It specifically targets smart contract development for Substrate’s `pallet-contracts`.
+Ink! is a Rust eDSL developed by Parity, that specifically targets smart contract development for Substrate’s `pallet-contracts`, otherwise known as the Wasm Virtual Machine.
 
-Ink! offers Rust [procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html#procedural-macro-hygiene) and a list of crates to facilitate development and allows developers to avoid writing boilerplate code.
+Ink! offers Rust [procedural macros](https://doc.rust-lang.org/reference/procedural-macros.html#procedural-macro-hygiene) and a list of crates to facilitate development and saves time by allowing developers to avoid writing boilerplate code.
 
-It is currently the most widely supported eDSL, and will be highly supported in the future. (by Parity and builders community).
+It is currently the most widely supported eDSL, and will be highly supported in the future by Parity, and community of builders on Polkadot.
 
 Ink! offers a broad range of features such as:
 

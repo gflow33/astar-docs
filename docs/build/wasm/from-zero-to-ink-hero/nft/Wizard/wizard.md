@@ -2,16 +2,16 @@
 
 ## Use the Wizard to generate generic PSP34 code
 
-To create a smart contract which follows PSP34 standard use Openbrush Wizard:
-1. Open [Openbrush.io](https://openbrush.io/) website and go to bottom of the page.
+To generate a smart contract that conforms to the PSP34 standard, you can use the Openbrush Wizard:
+1. Visit the [Openbrush.io](https://openbrush.io/) website and go to the bottom of the page.
 2. Select PSP34.
-3. Select the version to match the rest of the tutorial. Check *What will be used* in the [prerequisites chapter](../nft.md).
-4. Name your contract. In this tutorial we will use `shiden34`.
+3. Select the version that matches this guide. Check *What Version of Ink! Will I Need* in the [prerequisites section](../nft.md) to be sure.
+4. Choose a name for your contract. In this tutorial we will use `shiden34`
 5. Select extensions: *Metadata*, *Mintable*, *Enumerable*.
 6. Under Security pick *Ownable*.
-7. Copy `lib.rs` and `Cargo.toml`.
+7. Copy `lib.rs` and `Cargo.toml`
 
-Your `lib.rs` file should look like this:
+The `lib.rs` file should look like this:
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
 #![feature(min_specialization)]
@@ -72,7 +72,7 @@ pub mod shiden34 {
 }
 ```
 
-Your `Cargo.toml` should now look like this:
+The `Cargo.toml` should look like this:
 ```toml
 [package]
 name = "shiden34"
@@ -122,7 +122,7 @@ ink-as-dependency = []
 
 ```
 
-Make the folder structure or use `Swanky-cli` like this:
+Create the folder structure manually or use `Swanky-cli` to do so, and ensure it looks like this:
 ```bash
 .
 └── contracts
@@ -150,21 +150,21 @@ And your folder structure will look like:
         ├── Cargo.toml
         └── lib.rs
 ```
-You are now ready to check if all is set.   
-Run in root project folder:
+To confirm if the environment is ready to go, run the following in the project root folder:
+
 ```bash
 cargo check
 ```
 
 :::tip
-if your rust environment is setup to use stable toolchain as default (instead of nigthly build), you might get this error:
+if your Rust environment is set up to use the `stable` toolchain as default (instead of nightly build), you might get this error:
 ```error[E0554]: `#![feature]` may not be used on the stable release channel```
 
-In that case try to run the following command instead:
+In that case, either run the following command:
 ```bash
 cargo +nightly check
 ```
-or change your defauilt toolchain to nightly:
+or change the default toolchain to nightly:
 ```bash
 rustup default nightly
 ```
@@ -172,14 +172,14 @@ rustup default nightly
 
 
 ## Examine Openbrush Traits 
-Let's examine what we have inside module `shiden34` (lib.rs) so far:
+Let's examine what's inside the module `shiden34` (lib.rs) so far:
 * Defined structure `Contract` for contract storage.
-* Implemented constructor `new()` for `Contract` structure.
-* Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable, Ownable* for structure `Contract`.
-* Overridden `mint()` method from trait *Mintable*. More about this in next section.
+* Implemented constructor `new()` for the `Contract` structure.
+* Implemented Openbrush traits *PSP34, Metadata, Mintable, Enumberable, Ownable* for the `Contract` structure.
+* Overrided the `mint()` method from trait *Mintable*. More about this in the next section.
 
-Each of implemented traits will enrich `shiden34` contract with a set of methods. To examine which methods you now have available check:
-* Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all familiar functions from ERC721 plus a few extra:
+Each of the traits implemented will enrich the `shiden34` contract with a set of methods. To examine which methods are available, check:
+* Openbrush [PSP34 trait](https://github.com/Supercolony-net/openbrush-contracts/blob/main/contracts/src/traits/psp34/psp34.rs) brings all the familiar functions from ERC721 plus a few extra:
     * `collection_id()`
     * `balance_of()`
     * `owner_of()`
@@ -199,31 +199,31 @@ Each of implemented traits will enrich `shiden34` contract with a set of methods
     * `transferOwnership()`
     * `owner()`
 
-Major differences when compared with ERC721 are:
-1. `Metadata` trait brings possibility to define numerous attributes
-2. `PSP34` trait brings collection_id() which can be used or ignored in contracts
+Major differences when compared to ERC721 are:
+1. The `Metadata` trait opens the possibility to define numerous attributes.
+2. The `PSP34` trait brings `collection_id()`, which can be used or ignored in contracts.
 
-We could have used `Burnable` trait as well but for simplicity it is skipped in this tutorial since burning can be performed by sending a token to address 0x00.
+We could have assigned the `Burnable` trait as well but for simplicity have not, as burning can be performed by sending any token to address 0x00.
 
-After this step your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/wizard-step1).
+At this stage, your code should look like [this](https://github.com/swanky-dapps/nft/tree/tutorial/wizard-step1).
 
 ## Build, Deploy and Interact with the Contract
-Build your contract:
+Build the contract:
 ```bash
 cd contracts/shiden34
 cargo contract build --release
 ```
-Use ***shiden34.contract*** target to deploy contract.   
+Use ***shiden34.contract*** as the target to build the contract.   
 The file is located in this folder:
 ```
 ls target/ink/shiden34/
 ```
 
-To deploy your contract using Polkadot.js you can follow guide at `/docs/build/wasm/tooling/polkadotjs`. Other easy way to deploy your contract is by using the [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
+To deploy your contract using the Polkadot.js apps portal, follow the guide [here](../../../../../build/wasm/tooling/polkadotjs.md), or, you can use the [contracts-ui](https://contracts-ui.substrate.io/?rpc=wss://rpc.shibuya.astar.network).
 
-You can start interacting with your contract. You will notice that one token is already minted. This is due to the `mint()` call in the contract's constructor `new()`.
-* Try minting another token by calling `mint()`.
-* Read the token `ownerOf()` for your newly minted token.
+After deploying your contract, you should be able to interact with it. Notice that one token is already minted, due to the `mint()` call in the contract's constructor `new()`.
+* See if you can mint another token by calling `mint()`
+* Check the token `ownerOf()` for the newly minted token.
 * Check that `totalSupply()` has increased.
 
 

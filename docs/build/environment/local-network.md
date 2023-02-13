@@ -21,7 +21,8 @@ After you obtain the binary, you can rename the file to `astar`, and add executi
 chmod +x ./astar
 ```
 
-You should then be able to execute the binary. To see whether you can run the node, let's check the binary version.
+You should then be able to execute the binary. 
+To see whether you can run the node, let's check the binary version.
 
 ```sh
 ./astar --version
@@ -58,7 +59,7 @@ You can see the full list of the command options using the `help` subcommand:
 
 When you have successfully launched the local network, you will see the following messages in your terminal:
 
-![1](img/1.png)
+![1](img/10.png)
 
 OK! Let's explore your local network now.
 
@@ -70,12 +71,12 @@ Visit the following URL:
 
 There, you will see the following screen:
 
-![2](img/2.png)
+![2](img/11.png)
 
 This represents your local network. In this local network, some native tokens have already been issued to a few accounts. Let's visit the [Account page](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/accounts) from the Accounts Tab.
 
-![3](img/3.png)
+![3](img/13.png)
 
-Here, you can see that ALICE and BOB have around 1,000 tokens. In the following section, you will deploy your smart contract and interact with it by paying the transaction fees using these tokens.
+Here, you will see that ALICE and BOB each have around 1,000 tokens. In the following section, you will deploy a smart contract and interact with it, by paying the transaction fees in these tokens.
 
-In the Polkadot explorer, it's only possible to interact with the Substrate RPC, so to interact with the Ethereum RPC, you will have to use MetaMask.
+Using the Polkadot.js apps portal it's only possible to interact with the Substrate (Wasm) RPC, so to interact with the Ethereum (EVM) RPC, you will need to use MetaMask.

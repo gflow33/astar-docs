@@ -1,14 +1,10 @@
 # Introduction
-![banner](../assets/gradient4.jpg)
-To make use of this documentation effectively, you should possess a general understanding of programming basics. The programming languages used throughout are mainly Rust, Solidity, and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial. In conjunction with improving your understanding of the material contained within these guides, we recommend additionally that you review supplemental material covering these languages, in order to improve your overall understanding of the topics, and practical code examples provided. 
 
-Check out the following links for more information about [Rust](https://www.rust-lang.org/learn) and [Javascript](https://www.freecodecamp.org/).
+To make use of this documentation most effectively, you should possess a general understanding of blockchain and programming basics, however, lack of which should not discourage you from following along, or even deploying live contracts. The purpose of this guide is to provide the cursory knowledge required to transition from being a user of decentralized applications (dApps) and blockchain, to a developer, by performing *practical hands-on examples*, that are designed for all skill levels.
 
-### Do I Need Prior Knowledge of Blockchain to Follow these Guides?
-Your blockchain knowledge will be useful but if you are reading this that means you are on the right tract.
+The specific programming languages used throughout these sections are mainly Rust, Solidity, and JavaScript, for which previous knowledge is not necessary, but would be highly beneficial, so in order to gain a deeper understanding of the topics and practical examples within these sections, we recommend reviewing supplemental material covering these languages.
+
+Check out the following links for more information about [Rust](https://www.rust-lang.org/learn) and [JavaScript](https://www.freecodecamp.org/).
 
 ### I'm Building for the Polkadot & Kusama Ecosystem, Should I Read This?
-If you are already a builder in the Polkadot/Kusama ecosystem, you can most likely skip Introduction chapter, but recommended you read about [available Networks](./astar_family.md)
-
-### Do I need to be a developer to understand Introduction chapter?
-To use this introduction chapter you do not need any programming skills, and it will be useful later when you step into more advanced topics. 
+If you are already building in the Polkadot/Kusama ecosystem, you can skip the Introduction section, and jump straight to the [Network](./astar_family.md) section.

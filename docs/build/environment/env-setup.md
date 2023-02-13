@@ -5,7 +5,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Ink! Environment
+# Ink! Environment (REDUNDANT)
 
 ## Install and Configure the Rust Toolchain
 
@@ -29,13 +29,13 @@ rustup component add rust-src --toolchain nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
 
-Ink! contracts use the `nightly` version of Rust, so you can also specify it as `default`. (optional)
+Ink! contracts use the `nightly` version of Rust, so you may also want to specify it as `default`. (optional)
 
 ```bash
 rustup default nightly
 ```
 
-## Install the WebAssembly Compiler & Toolchain
+### Install the WebAssembly Compiler & Toolchain
 
 [Binaryen](https://github.com/WebAssembly/binaryen) is a compiler and toolchain infrastructure library for WebAssembly.
 WebAssembly contract development tools require Binaryen to be installed as a prerequisite.

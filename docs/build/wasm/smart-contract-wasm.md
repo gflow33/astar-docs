@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Smart Contract Runtime Environment
 
-Astar & Shiden runtimes are based on Substrate, and both networks incorporate `pallet-contracts`, a sandboxed environment used to deploy and execute WebAssembly smart contracts. Any language that compiles to Wasm may be deployed and run on this Wasm Virtual Machine, however, the code should be compatible with the `pallet-contracts` API.
+Astar & Shiden runtimes are based on Substrate, and both networks incorporate `pallet-contracts`, a sandboxed environment used to deploy and execute WebAssembly smart contracts. Any programming language that compiles to Wasm may be deployed and run on this Wasm Virtual Machine, however, the code should be compatible with the `pallet-contracts` API.
 
 To avoid unnecessary complexity, and writing boilerplate code, the most appropriate method of building will involve the use of an eDSL specifically targeting `pallet-contracts`, such as [ink!] (based on Rust), or [ask!] (based on AssemblyScript), or possibly others as the ecosystem grows.
 
@@ -69,10 +69,10 @@ There are several benefits of decoupling the contract code from the address/stor
 The only library available to communicate with smart contracts is [Polkadot.js API](https://github.com/polkadot-js/api).
 
 :::info
-This API provides application developers the ability to query a node and interact with the Polkadot or Substrate chains using Javascript.
+This API provides application developers the ability to query a node and interact with the Polkadot or Substrate chains using JavaScript.
 :::
 
-Parity also developed a web application to interact with contracts called [contracts-ui](https://github.com/paritytech/contracts-ui).
+Parity has also developed a web application to interact with contracts called [contracts-ui](https://github.com/paritytech/contracts-ui).
 
 ## The Wasm Stack vs. Ethereum
 

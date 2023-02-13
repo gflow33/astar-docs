@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Nodes Supporting Contracts
+# Smart Contract Development Nodes
 
 ## Local Development Nodes
 
@@ -10,7 +10,7 @@ sidebar_position: 3
 
 Swanky Node is a local development node tracking the Shiden network.
 
-Swanky Node is the best choice if you would like to develop your contract & test it in your local environment, prior to deploying it on Astar/Shiden mainnet.
+Swanky Node is the best choice for developing and testing smart contracts in a local environment, prior to deployment on Shiden or Astar mainnets.
 
 Features:
 
@@ -18,26 +18,26 @@ Features:
 - dApp staking enabled
 - Chain Extensions
 
-You can find the Github repo [here](https://github.com/AstarNetwork/swanky-node).
+For more information, the Github repository can be [here](https://github.com/AstarNetwork/swanky-node).
 
 ### Substrate Contract Node
 
-Substrate contract node targets Substrate master. It is the best choice if you would like to try the latest (or unstable) features of ink! and/or pallet-contracts.
+The Substrate contract node targets Substrate master, and is the best choice for testing the very latest (or unstable) features of ink! and/or `pallet-contracts`.
 
 Features:
 
 - Targets the latest Substrate master
 - Consensus: `instant-seal`
 
-The Github repository can be found [here](https://github.com/paritytech/substrate-contracts-node).
+For more information, the Github repository can be found [here](https://github.com/paritytech/substrate-contracts-node).
 
 ## Testnet Node: Shibuya
 
-Shibuya has nearly the same chain specifications as Shiden & Astar mainnets, and provides an ideal environment for developers to test and debug their smart contracts, prior to launching their dApp on mainnet.
+The Shibuya testnet chain specifications nearly mirror those on Shiden & Astar mainnets, so provides an ideal environment for developers to test their smart contracts and dApps, prior to launching them in a production environment.
 
-Shibuya's `pallet-contracts` has `unstable-feature` so you can use features from ink! that are flagged unstable in `pallet-contracts`.
+Shibuya's `pallet-contracts` has `unstable-feature` enabled, so you are able to use ink! features flagged unstable in `pallet-contracts`.
 
-To get the latest information and test tokens from the Faucet, consult Shibuya's official docs.
+For all the latest information about Shibuya or obtain tokens from the faucet, consult the official documentation, or visit the [Test Tokens](../environment/faucet.md) page in the previous section.
 
 ## Mainnet Node: Shiden
 

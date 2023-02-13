@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # Test Tokens
 
-A faucet is the site/place where you can get test tokens. Faucets are available for all Shibuya accounts and empty Astar and Shiden accounts. Use them to make sure your wallet has enough assets to cover the cost of deployment and pay transaction gas.
+A faucet is a automated system designed to dispense test tokens. Faucets are available for all Shibuya accounts, and Astar and Shiden accounts with empty balances. Faucets can be used to fund your wallet with enough assets to cover transaction and deployment costs.
 
-Let's look at three ways to get SBY for your Shibuya account.
+Let's examine three ways to obtain SBY tokens for your Shibuya account.
 
 :::info
 This guide will also work for ASTR and SDN assets on Astar and Shiden networks.
@@ -14,7 +14,7 @@ This guide will also work for ASTR and SDN assets on Astar and Shiden networks.
 
 ## Astar Portal
 
-To access the faucet visit [the portal](https://portal.astar.network/#/assets), and click on the `Faucet` button.
+To access the faucet visit [Astar Portal](https://portal.astar.network/#/assets), and click on the `Faucet` button.
 
 ![1](img/1.png)
 

@@ -6,7 +6,7 @@ import Figure from '/src/components/figure'
 
 # Swanky Suite
 
-Swanky Suite aims to be an "all-in-one" tool for Wasm smart contract developers. It is based on existing tools like` cargo contract CLI` and `polkadot.js` but extends their functionality with many additional features such as smart contract templates, and an instant finality (Swanky) node,  which reduces the contract development lifecycle. Swanky Suite is a tool that provides Web3 developers with an experience that is more in-line with what they're familiar with, compared to popular tooling for EVM.
+Swanky Suite aims to be an all-in-one tool for Wasm smart contract developers. It is based on existing tools like` cargo contract CLI` and `polkadot.js`, but extends their functionality with many additional features such as smart contract templates and an instant finality (Swanky) node, which reduces the contract development lifecycle. Swanky Suite is a tool that provides Web3 developers with an experience that's more in-line with what they're already familiar with, compared to popular tooling for EVM.
 
 Swanky Suite offers an extensible set of features, allowing developers to:
 
@@ -35,7 +35,7 @@ The architecture envisioned for Swanky CLI and Swanky Node (Local developer node
 
 Swanky CLI is a Node.js CLI app that uses Polkadot.js API on the backend, alongside many existing tools, such as the `cargo` contract CLI. In the future, there will be many additional features to support developers, such as Wasm dApp bootstrapping via smart contract and UI scaffolding, integration tests, management of local nodes, account management, connecting and deploying contracts to both local and remote networks, compiling for various languages from a single CLI app, compatibility checks between the contract pallet and compiler, and much more.
 
-### Installing
+### Installation
 
 The CLI can be installed in two ways:
 
@@ -279,7 +279,7 @@ Swanky Node is a Substrate based blockchain configured to enable `pallet-contrac
 
 - [pallet-contracts](https://github.com/paritytech/substrate/tree/master/frame/contracts) (polkadot-0.9.27) and its unstable-feature are enabled by default.
 - `grandpa` & `aura` consensus have been removed, and `instant-seal` & `manual-seal` are used instead.
-  Blocks are authored (1) as soon as transactions enter the pool (2) when `engine_createBlock` RPC is called.
+  Blocks are authored (1) as soon as transactions enter the pool, or (2) when `engine_createBlock` RPC is called.
   Blocks are finalized when `engine_finalizeBlock` RPC is called.
 - [pallet-dapps-staking](https://github.com/AstarNetwork/astar-frame/tree/polkadot-v0.9.27/frame/dapps-staking) and the Chain Extension to interact with it.
 - [pallet-assets](https://github.com/paritytech/substrate/tree/master/frame/assets).

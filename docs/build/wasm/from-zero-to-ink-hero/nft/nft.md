@@ -2,33 +2,33 @@
 sidebar_position: 1
 ---
 
-# Prerequisites
+# Overview
 
-This tutorial targets developers with an **intermediate** level in ink! and Rust.   
-Please follow this tutorial first:
+This tutorial is suitable for developers with **intermediate** knowledge of ink! and basic understanding Rust. Using the examples provided, you will build and deploy a PSP34 in ink! with functions commonly seen in NFT projects.
+- [PSP34 standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md)
+
+### Prerequisites
+
+Previous experience compiling and deploying an ink! smart contract will be beneficial, such as from following the previous Flipper guide:
 
 | Tutorial                                                                   | Difficulty                     |
 |----------------------------------------------------------------------------|--------------------------------|
 | [Your First Flipper Contract](../flipper-contract/flipper-contract.md)              | Basic ink! -  Basic Rust       | 
 | [Implement Uniswap V2 core DEX](../dex/dex.md) | Advanced ink! - Basic Rust |         
 
-# To follow this tutorial you will need:
-- To [set up your ink! environment](/docs/build/environment/ink_environment.md).
-- Basic Rust knowledge. [Learn Rust](https://www.rust-lang.org/learn)
-- Prior knowledge about ERC721 is helpful but not mandatory.
+In addition to:
+- An already provisioned [ink! environment](/docs/build/environment/ink_environment.md).
+- Basic knowledge of Rust. Visit [here for more information about Rust](https://www.rust-lang.org/learn).
+- Prior knowledge of ERC721 will be beneficial, but is not necessary.
 
-# What will we do?
-In this tutorial we will implement PSP34 in ink! with additional functions often seen in NFT projects.
-- [PSP34 standard](https://github.com/w3f/PSPs/blob/master/PSPs/psp-34.md)
-
-# What will be used?
+### What Version of Ink! Will I Need?
 - [ink! 3.4.0 (latest)](https://github.com/paritytech/ink/tree/v3.4.0)   
 - [Openbrush 2.3.0 (latest)](https://github.com/Supercolony-net/openbrush-contracts/tree/v2.3.0)
 
-# What will you learn?
-- Full implementation of NFT project in ink!.
-- Use Openbrush wizard to create PSP34 smart contract.
-- File structure for a smart contract with an additional trait.
+### What Topics Will Be Covered in This Guide?
+- Full implementation of an NFT project in ink!
+- How to use Openbrush wizard to create PSP34 smart contract.
+- The file structure for a smart contract with an additional trait.
 - Trait and generic implementation in separate files.
 - Unit test for smart contract.
 - Event handling.

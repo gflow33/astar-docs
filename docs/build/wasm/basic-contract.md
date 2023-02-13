@@ -2,14 +2,16 @@
 sidebar_position: 4
 ---
 
-# Basic Contract
+# Basic Contract Structure
 
-Each contract should be in its **own crate**. In a folder, create two files:
+Each contract should be in its **own crate**: a compilation unit of the Rust programming language that can contain functions, types, and other definitions.
+
+In a folder, create two files:
 
 - Cargo.toml: The manifest.
 - lib.rs: The default library file.
 
-Inside the Cargo.toml you will need to specify parameters in the `[package]`, `[dependencies]`, `[lib]` type, and `[features]` sections:
+Inside the Cargo.toml you will need to specify parameters in `[package]`, `[dependencies]`, `[lib]` type, and `[features]` sections:
 
 ```toml
 [package]
@@ -47,15 +49,15 @@ std = [
 ink-as-dependency = []
 ```
 
-In the library file - ink! has a few minimum requirements:
+In the library file (lib.rs), ink! has the following requirements:
 
 - `#![cfg_attr(not(feature = "std"), no_std)]` at the beginning of each contract file link.
-- a module with `#[ink::contract]`.
-- a (storage) struct - that can be empty - with `#[ink(storage)]`.
-- at least one constructor with `#[ink(constructor)]`.
-- at least one fn with `#[ink(message)]`.
+- a module with `#[ink::contract]`
+- a (storage) struct - that can be empty - with `#[ink(storage)]`
+- at least one constructor with `#[ink(constructor)]`
+- at least one fn with `#[ink(message)]`
 
-In the lib.rs the minimum implementation is:
+So, the minimum implementation in lib.rs is:
 
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]

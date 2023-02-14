@@ -1,12 +1,12 @@
 # Ask! Smart Contracts
 
-This guide will support you to set up your local environment and deploy a simple Ask! contract on our testnet.
+This guide will help you set up your local environment and deploy a simple Ask! contract on our testnet, Shibuya.
 
 ---
 
-## What is Ask!?
+## What is Ask!
 
-Ask! is a framework for AssemblyScript developers to write WASM smart contracts for `pallet-contracts`. Its syntax is similar to TypeScript. [Current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury. Please keep in mind that Ask! is still under development and no release is available at the moment.
+Ask! is a framework for AssemblyScript developers to write Wasm smart contracts for `pallet-contracts`, otherwise known as the Wasm Virtual Machine. Its syntax is similar to TypeScript. The [current project](https://polkadot.polkassembly.io/post/949) is funded by Polkadot treasury, and still under active development. 
 
 ## Ask! Environment Setup
 
@@ -17,7 +17,7 @@ git clone https://github.com/ask-lang/ask-template.git
 cd ask-template
 ```
 
-The command above sets you a simple Ask! contract in `flipper.ts`.
+The command above will download a simple Ask! contract, shown below in `flipper.ts`.
 
 ```ts
 /* eslint-disable @typescript-eslint/no-inferrable-types */
@@ -77,20 +77,20 @@ export class Contract {
 }
 ```
 
-We run the command below which build the template contract.
+Run the command below, which will build the template contract.
 
 ```bash
 # Install dependencies and Build the template contract
 yarn && yarn build flipper.ts
 ```
 
-The above command will generate WASM code and the metadata file of the contract in `metadata.json` and `flipper.optimized.wasm` respectively.
+The above command will generate the Wasm code and metadata file for the contract in `flipper.optimized.wasm`, and `metadata.json`, respectively.
 
 ![08](img/08a.png)
 
 Now we will deploy this smart contract on our testnet.
 
-We will access [polkadot.js](https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and pick `metadata.json` for “json for either ABI or .contract bundle” section and pick `flipper.opstimized.wasm` for “compiled contract WASM” section.
+Visit the [Polkadot.js apps portal](https://polkadot.js.org/apps/) and deploy the smart contract. Select Shibuya testnet and choose `metadata.json` for “json for either ABI or .contract bundle” section, or `flipper.optimized.wasm` for the “compiled contract Wasm” section.
 
 ![09](img/09a.png)
 
@@ -111,4 +111,4 @@ If you have any questions, please feel free to ask us in our [official discord c
 
 ## Reference
 
-- [Official document for Ask!](https://github.com/ask-lang/ask)
+- [Official documentation for ask!](https://github.com/ask-lang/ask)
